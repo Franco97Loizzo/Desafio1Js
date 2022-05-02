@@ -9,8 +9,8 @@
 let menuPrincipal
 alert(`Bienvenido al juego ESCAPA DEL CALABOZO
 Dale click en aceptar para ver instrucciones`);
-/* let opcionDerIzq = ("DERECHA" || "IZQUIERDA") */
-let opcionDerIzq
+let opcionDerIzq = ("DERECHA" || "IZQUIERDA")
+/* let opcionDerIzq */
 
 while (menuPrincipal!==opcionDerIzq)
 {
