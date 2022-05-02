@@ -6,11 +6,12 @@
 // total de 8 opciones, 2 correctas
 // 4 opciones de te vio el guardia, 2 de oh no no funcionaria, 2 HAS LOGRADO ESCAPAR
 
-let menuPrincipal = prompt (`Bienvenido al juego ESCAPA DEL CALABOZO
-                            Dale click en aceptar para ver instrucciones`);
+let menuPrincipal
+alert(`Bienvenido al juego ESCAPA DEL CALABOZO
+Dale click en aceptar para ver instrucciones`);
+/* let opcionDerIzq = ("DERECHA" || "IZQUIERDA") */
+let opcionDerIzq
 
-let opcionDerIzq = ("DERECHA" || "IZQUIERDA")
-opcionDerIzq = opcionDerIzq.toUpperCase
 while (menuPrincipal!==opcionDerIzq)
 {
     menuPrincipal = prompt (`Has sido aprisionado por error
@@ -19,8 +20,10 @@ while (menuPrincipal!==opcionDerIzq)
                     Decides mirar hacia:
                     IZQUIERDA
                     DERECHA`);
+                    
         if (menuPrincipal==="DERECHA")
         {
+            
             let opcionesDerecha = prompt (`Decides mirar el lado derecho de tu calabozo
                                     Logras distinguir un pequeño desperfecto en el suelo
                                     Pareciera que alguien ya intento escapar ahi,
@@ -35,23 +38,18 @@ while (menuPrincipal!==opcionDerIzq)
             {
                 alert(`El guardia te ve intentado cavar un tunel
                         Hacen que te lleven a una celda con mas seguridad :c`)
-                menuPrincipal = prompt (`Decides mirar hacia:
-                    IZQUIERDA
-                    DERECHA`)
             }
             else if (opcionesDerecha==="2")
             {
                 alert(`Haces que el guardia venga a ver la gotera
                         Es despistado y deja las llaves afuera de la celda
                         CORRES Y LO ENCIERRAS`)
-                alert(`FELICITACIONES!!! HAZ LOGRADO ESCAPAR
-                        Deseas volver a jugar?
-                        - SI
-                        - NO`)
+                alert(`FELICITACIONES!!! HAZ LOGRADO ESCAPAR`)
             }
         }
         if (menuPrincipal==="IZQUIERDA")
         {
+            
             let opcionesIzquierda = prompt(`Decides mirar al lado izquierdo de tu calabozo
                                             Ves cerca de las rejas, una escoba
                                             Creo que alguien de la limpieza va ser despedido
@@ -65,17 +63,12 @@ while (menuPrincipal!==opcionDerIzq)
             {
                 alert(`Pensandolo bien, que harias con una escoba???
                         Bueno, guardala y salva al empleado de limpieza, buen gesto`)
-                menuPrincipal = prompt (`Decides mirar hacia:
-                    IZQUIERDA
-                    DERECHA`)
             }
             else if (opcionesIzquierda==="2")
             {
                 alert(`No tienes habilidades de ganzua, que quieres intentar???
                         Tu nivel de observador se ha incrementado`)
-                menuPrincipal = prompt (`Decides mirar hacia:
-                    IZQUIERDA
-                    DERECHA`)
+                        
             }
         }
     else
