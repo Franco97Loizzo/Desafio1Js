@@ -6,13 +6,15 @@
 // total de 8 opciones, 2 correctas
 // 4 opciones de te vio el guardia, 2 de oh no no funcionaria, 2 HAS LOGRADO ESCAPAR
 
+//Habia anotado la forma de hacerlo al terminar la clase, fui pretencioso admito xD
+//reduje las opciones y demas, lo guardo por anotaciones
+
 let menuPrincipal
 alert(`Bienvenido al juego ESCAPA DEL CALABOZO
 Dale click en aceptar para ver instrucciones`);
-let opcionDerIzq = ("DERECHA" || "IZQUIERDA")
-/* let opcionDerIzq */
+let finDelJuego = false;
 
-while (menuPrincipal!==opcionDerIzq)
+while (finDelJuego!==true)
 {
     menuPrincipal = prompt (`Has sido aprisionado por error
                     Debemos salir de este calabozo!!!
@@ -45,6 +47,7 @@ while (menuPrincipal!==opcionDerIzq)
                         Es despistado y deja las llaves afuera de la celda
                         CORRES Y LO ENCIERRAS`)
                 alert(`FELICITACIONES!!! HAZ LOGRADO ESCAPAR`)
+                finDelJuego = true;
             }
         }
         if (menuPrincipal==="IZQUIERDA")
@@ -71,10 +74,15 @@ while (menuPrincipal!==opcionDerIzq)
                         
             }
         }
-    else
-    {
-        alert("opcion invalida")
-    }
+        else
+        {
+            alert("opcion invalida")
+        }
+        /*Dejo anotacion: Funciona como quiero, pero igual al terminar el juego
+        osea cuando la variable finDelJuego es true, marca opcion invalida y finaliza el proceso
+        No estaria encontrando forma de conseguirlo, intente poner este else con la alert
+        debajo de los if izquierda e if derecha pero es peor porque lo toma dos veces
+        */
 }
 
 
